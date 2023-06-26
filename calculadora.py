@@ -1,7 +1,5 @@
 # Calculadora com While
 
-numero1 = 0
-numero2 = 0
 
 while True:
     numero_1 = input('digite um número: ')
@@ -10,6 +8,9 @@ while True:
     
     numeros_validos = None
     
+    num_1_float = 0
+    num_2_float = 0
+           
     try:
         num_1_float = float(numero_1)
         num_2_float = float(numero_2)
@@ -25,8 +26,20 @@ while True:
         print('Digite somente 1 operador.')
         continue
     
-    
-    
+    if operador == '+':
+        soma = num_1_float + num_2_float
+        print(f'A soma deles é: {soma:.2f}')
+    elif operador == '-':
+        sub = num_1_float - num_2_float
+        print(f'a subtração é: {sub:.2f}')
+    elif operador == '/':
+        div = num_1_float / num_2_float
+        print(f'a divisão é: {div}')     
+    elif operador == '*':
+        mult = num_1_float * num_2_float
+        print(f'a multiplicação é: {mult}')
+    else:
+        print('Erro!')
     
     operadores_permitidos = '+-/*'
     
